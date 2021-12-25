@@ -1,12 +1,13 @@
 import { NextPage } from 'next';
+import { Error, Loading } from '../components';
 import { useFuturamaData } from '../hooks/useFuturamaData';
-import { Info } from '../types/Info';
+import { Info } from './types/Info';
 
 const InfoPage: NextPage = () => {
 	const { data, error } = useFuturamaData('info');
 
-	if (error) return <div>에러가 발생했습니다.</div>;
-	if (!data) return <div>잠시만 기다려 주세요.</div>;
+	if (error) return <Error />;
+	if (!data) return <Loading />;
 
 	return (
 		<div>
@@ -17,6 +18,7 @@ const InfoPage: NextPage = () => {
 
 					return (
 						<div key={`info-${id}`}>
+							<p>이미지 주소 가져와서 넣는 방법?</p>
 							<strong>방영 기간 : {yearsAired}</strong>
 							<ul>
 								<li>{creators[0].name}</li>
