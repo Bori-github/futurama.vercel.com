@@ -30,4 +30,9 @@ export const CharactersContainer = ({ name }: CharactersProps) => {
 	);
 };
 
-const CharacterContainer = styled.section``;
+const CharacterContainer = styled.section`
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+`;

@@ -6,6 +6,7 @@ const CharactersPage: NextPage = () => {
 
 	return (
 		<div>
+			<h1>Characters</h1>
 			<CharactersContainer name={name} />
 		</div>
 	);
