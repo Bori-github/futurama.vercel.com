@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { Error, Loading, CastCard } from '.';
 import { useFuturamaData } from '../hooks/useFuturamaData';
 import { Cast } from '../types/Cast';
@@ -14,11 +15,17 @@ export const CastContainer = ({ name }: CastProps) => {
 
 	return (
 		<div>
-			<div>
+			<CastBox>
 				{data.map((useFuturamaData: Cast) => {
 					return <CastCard key={`cast-list-${useFuturamaData.id}`} castData={useFuturamaData} />;
 				})}
-			</div>
+			</CastBox>
 		</div>
 	);
 };
+
+const CastBox = styled.section`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+`;
