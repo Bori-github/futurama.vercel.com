@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import { Navigation } from '.';
+import { Footer } from '.';
 
 export const Layout: React.FC = ({ children }) => {
 	return (
-		<div>
+		<>
 			<Navigation />
-			<div>{children}</div>
-		</div>
+			<ContentsContainer>{children}</ContentsContainer>
+			<Footer />
+		</>
 	);
 };
+
+const ContentsContainer = styled.main``;

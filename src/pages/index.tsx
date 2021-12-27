@@ -11,21 +11,7 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<HomeContainer>
-				<HomeTitle>
-					Welcome to
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Futurama_1999_logo.svg/250px-Futurama_1999_logo.svg.png"
-						alt="Futurama"
-					/>
-				</HomeTitle>
-			</HomeContainer>
-
-			<HomeFooter>
-				<p>
-					Powered by <span>BORI</span>
-				</p>
-			</HomeFooter>
+			<HomeContainer></HomeContainer>
 		</div>
 	);
 };
@@ -37,22 +23,4 @@ const HomeContainer = styled.section`
 	min-height: calc(100vh - 96px);
 	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.5);
-`;
-
-const HomeTitle = styled.h1`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 0;
-	padding: 30px 0;
-	color: #fff;
-	font-size: 20px;
-	letter-spacing: 1px;
-	text-align: center;
-`;
-
-const HomeFooter = styled.footer`
-	padding: 20px 0;
-	background-color: #eee;
-	text-align: center;
 `;
