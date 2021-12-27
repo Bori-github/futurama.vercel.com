@@ -32,7 +32,6 @@ const InfoPage: NextPage = () => {
 								<dd>{yearsAired}</dd>
 								<dt>Creators</dt>
 								{data[0].creators.map((creator: CREATOR) => {
-									console.log(creator);
 									return <span key={`name${creator.name}`}>{creator.name}</span>;
 								})}
 							</dl>

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Error, Loading, CharacterCard } from '.';
-import { MEDIA_QUERY_END_POINT } from '../contants';
 import { useFuturamaData } from '../hooks/useFuturamaData';
 import { Characters } from '../types/Characters';
 

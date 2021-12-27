@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
-import { MEDIA_QUERY_END_POINT } from '../contants';
 
 import { Cast } from '../types/Cast';
 
@@ -8,14 +7,8 @@ interface CastProps {
 	castData: Cast;
 }
 
-interface BIO {
-	text: string;
-	url: string;
-}
-
 export const CastCard = ({ castData }: CastProps) => {
 	const { name, born, bio } = castData;
-	console.log(bio);
 	return (
 		<Container>
 			<TextBox>

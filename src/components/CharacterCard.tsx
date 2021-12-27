@@ -21,7 +21,7 @@ export const CharacterCard = ({ characterData }: CharacterProps) => {
 				</CharacterName>
 				<CharacterSay>{sayings[0]}</CharacterSay>
 			</CharacterInfoContainer>
-			<CharacterInfo>
+			<CharacterInfo className="character-info">
 				<InfoLi>
 					Species<InfoDd>{species}</InfoDd>
 				</InfoLi>
@@ -131,7 +131,7 @@ const Container = styled.section`
 	width: 90%;
 	margin: 30px 0;
 
-	&:hover > * {
+	&:hover .character-info {
 		opacity: 1;
 	}
 
