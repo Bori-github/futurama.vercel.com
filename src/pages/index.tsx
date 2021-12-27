@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { MEDIA_QUERY_END_POINT } from '../contants';
 
 const Home: NextPage = () => {
 	return (
@@ -20,7 +21,11 @@ export default Home;
 
 const HomeContainer = styled.section`
 	width: 100vw;
-	min-height: calc(100vh - 96px);
+	min-height: calc(100vh - 293px);
 	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.5);
+
+	@media screen and (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+		min-height: calc(100vh - 260px);
+	}
 `;

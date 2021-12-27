@@ -14,13 +14,11 @@ export const CastContainer = ({ name }: CastProps) => {
 	if (!data) return <Loading />;
 
 	return (
-		<div>
-			<CastBox>
-				{data.map((useFuturamaData: Cast) => {
-					return <CastCard key={`cast-list-${useFuturamaData.id}`} castData={useFuturamaData} />;
-				})}
-			</CastBox>
-		</div>
+		<CastBox>
+			{data.map((useFuturamaData: Cast) => {
+				return <CastCard key={`cast-list-${useFuturamaData.id}`} castData={useFuturamaData} />;
+			})}
+		</CastBox>
 	);
 };
 
@@ -28,4 +26,5 @@ const CastBox = styled.section`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding: 30px;
 `;

@@ -17,7 +17,7 @@ const InfoPage: NextPage = () => {
 
 	return (
 		<Container>
-			<Title>Futurama infomation</Title>
+			<Title>Infomation</Title>
 			{data.map((infoData: Info) => {
 				const { id, synopsis, yearsAired, creators } = infoData;
 				return (

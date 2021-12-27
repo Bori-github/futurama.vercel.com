@@ -14,18 +14,16 @@ export const CharactersContainer = ({ name }: CharactersProps) => {
 	if (!data) return <Loading />;
 
 	return (
-		<div>
-			<CharacterContainer>
-				{data.map((useFuturamaData: Characters) => {
-					return (
-						<CharacterCard
-							key={`character-list-${useFuturamaData.id}`}
-							characterData={useFuturamaData}
-						/>
-					);
-				})}
-			</CharacterContainer>
-		</div>
+		<CharacterContainer>
+			{data.map((useFuturamaData: Characters) => {
+				return (
+					<CharacterCard
+						key={`character-list-${useFuturamaData.id}`}
+						characterData={useFuturamaData}
+					/>
+				);
+			})}
+		</CharacterContainer>
 	);
 };
 
