@@ -6,3 +6,5 @@ export * from './CastCard';
 export * from './CastContainer';
 export * from './EpisodeCard';
 export * from './EpisodesContainer';
+export * from './InventoryCard';
+export * from './InventoryContainer';
