@@ -10,45 +10,38 @@ export const MEDIA_QUERY_END_POINT = {
 export const ROUTES = [
 	{
 		ID: 0,
-		PATH: '/futurama',
-		LABEL: '퓨처라마',
-		SUBS: [
-			{
-				ID: 0,
-				PATH: '/info',
-				LABEL: '기본정보',
-				ORDER: 0,
-			},
-			{
-				ID: 1,
-				PATH: '/characters',
-				LABEL: '등장인물',
-				ORDER: 1,
-			},
-			{
-				ID: 2,
-				PATH: '/cast',
-				LABEL: '출연',
-				ORDER: 2,
-			},
-			{
-				ID: 3,
-				PATH: '/episodes',
-				LABEL: '회차정보',
-				ORDER: 3,
-			},
-			{
-				ID: 4,
-				PATH: '/questions',
-				LABEL: '퓨처라마 퀴즈',
-				ORDER: 4,
-			},
-			{
-				ID: 5,
-				PATH: '/inventory',
-				LABEL: '퓨처라마 물품목록',
-				ORDER: 5,
-			},
-		],
+		PATH: '/info',
+		LABEL: 'Information',
+		ORDER: 0,
+	},
+	{
+		ID: 1,
+		PATH: '/characters',
+		LABEL: 'Characters',
+		ORDER: 1,
+	},
+	{
+		ID: 2,
+		PATH: '/cast',
+		LABEL: 'Cast',
+		ORDER: 2,
+	},
+	{
+		ID: 3,
+		PATH: '/episodes',
+		LABEL: 'Episodes',
+		ORDER: 3,
+	},
+	{
+		ID: 4,
+		PATH: '/questions',
+		LABEL: 'Quiz',
+		ORDER: 4,
+	},
+	{
+		ID: 5,
+		PATH: '/inventory',
+		LABEL: 'Inventory',
+		ORDER: 5,
 	},
 ];
