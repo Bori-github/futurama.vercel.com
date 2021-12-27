@@ -16,34 +16,79 @@ const InfoPage: NextPage = () => {
 	if (!data) return <Loading />;
 
 	return (
-		<InfoContainer>
-			<h3>Futurama info</h3>
-			<main>
-				{data.map((infoData: Info) => {
-					const { id, synopsis, yearsAired, creators } = infoData;
-					return (
-						<div key={`info-${id}`}>
-							<img
-								src="https://w.namu.la/s/c30d9b068104918e6beb1cb3454b655659ac7fc28c959939f9d008f7d460821797714195fb71dfd3e3c378b14fc0a0c3f8fb89bfe48c77ca0f0d7d181245d1dd006f12c188f0b3da872b6138f4be4a3860ec0ea0ec99a8f2172b73f3422f84d9e802e2bc94ece8d7ffe0b04b0ba7b9cb"
-								alt=""
-							/>
-							<dl>
-								<dt>Year-aired</dt>
-								<dd>{yearsAired}</dd>
-								<dt>Creators</dt>
+		<Container>
+			<Title>Futurama infomation</Title>
+			{data.map((infoData: Info) => {
+				const { id, synopsis, yearsAired, creators } = infoData;
+				return (
+					<InfoContainer key={`info-${id}`}>
+						<img src="/info.png" alt="Futurama poster" className="InfoImg" />
+						<ul>
+							<InfoItem>
+								Year-aired <span className="InfoData">{yearsAired}</span>
+							</InfoItem>
+							<InfoItem>
+								Creators
 								{data[0].creators.map((creator: CREATOR) => {
-									return <span key={`name${creator.name}`}>{creator.name}</span>;
+									return (
+										<span key={`name${creator.name}`} className="InfoData">
+											{creator.name}
+										</span>
+									);
 								})}
-							</dl>
-							<p>{synopsis}</p>
-						</div>
-					);
-				})}
-			</main>
-		</InfoContainer>
+							</InfoItem>
+						</ul>
+						<p>{synopsis}</p>
+					</InfoContainer>
+				);
+			})}
+		</Container>
 	);
 };
 
 export default InfoPage;
 
-const InfoContainer = styled.section``;
+const Container = styled.section`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30px;
+`;
+
+const Title = styled.h3`
+	position: relative;
+	padding: 5px;
+	border-bottom: 1px solid #000;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		left: 0;
+		border-bottom: 1px solid #000;
+	}
+`;
+
+const InfoContainer = styled.div`
+	padding: 20px 0 30px;
+	text-align: center;
+
+	.InfoImg {
+		width: 60%;
+		margin: 0 auto;
+		object-fit: contain;
+	}
+`;
+
+const InfoItem = styled.li`
+	border-radius: 20px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	font-size: 14px;
+
+	.InfoData {
+		margin: 0 5px;
+		font-size: 18px;
+	}
+`;
