@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Navigation } from '.';
-import { Footer } from '.';
+import { Footer } from './Footer';
 
 export const Layout: React.FC = ({ children }) => {
 	return (
