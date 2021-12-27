@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { Error, Loading, EpisodeCard } from '.';
 import { useFuturamaData } from '../hooks/useFuturamaData';
 import { Episodes } from '../types/Episodes';
@@ -13,12 +14,19 @@ export const EpisodesContainer = ({ name }: EpisodeProps) => {
 	if (!data) return <Loading />;
 
 	return (
-		<div>
+		<Container>
 			{data.map((useFuturamaData: Episodes) => {
 				return (
 					<EpisodeCard key={`episode-list-${useFuturamaData.id}`} episodesData={useFuturamaData} />
 				);
 			})}
-		</div>
+		</Container>
 	);
 };
+
+const Container = styled.section`
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+`;
