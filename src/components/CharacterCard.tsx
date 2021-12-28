@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { MEDIA_QUERY_END_POINT } from '../contants';
-
 import { Characters } from '../types/Characters';
 
 interface CharacterProps {

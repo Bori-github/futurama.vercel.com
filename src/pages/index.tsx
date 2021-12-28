@@ -31,7 +31,6 @@ const HomeContainer = styled.section`
 	width: 100vw;
 	padding: 30px 0;
 	box-sizing: border-box;
-	/* background-color: rgba(0, 0, 0, 0.5); */
 	color: #fff;
 	text-align: center;
 
