@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
-
 import { Cast } from '../types/Cast';
 
 interface CastProps {
@@ -16,7 +15,9 @@ export const CastCard = ({ castData }: CastProps) => {
 				<CastText>{born}</CastText>
 			</TextBox>
 			<Link href={`${bio.url}`}>
-				<MoreBtn target="_blank">more</MoreBtn>
+				<a target="_blank" className="MoreBtn">
+					more
+				</a>
 			</Link>
 		</Container>
 	);
@@ -27,20 +28,20 @@ const Container = styled.div`
 	border-radius: 10px;
 	background-color: #fff;
 	text-align: center;
+
+	.MoreBtn {
+		padding: 3px 7px;
+		border: 2px solid #c84b31;
+		border-radius: 20px;
+		background-color: #c84b31;
+		cursor: pointer;
+	}
 `;
 
 const TextBox = styled.div`
 	margin-bottom: 10px;
 	padding: 5px;
 	border: 2px solid #c84b31;
-`;
-
-const MoreBtn = styled.a`
-	padding: 3px 7px;
-	border: 2px solid #c84b31;
-	border-radius: 20px;
-	background-color: #c84b31;
-	cursor: pointer;
 `;
 
 const CastText = styled.p`
