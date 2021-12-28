@@ -29,4 +29,5 @@ const Container = styled.section`
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: center;
+	padding: 30px 0;
 `;

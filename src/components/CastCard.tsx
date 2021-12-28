@@ -23,8 +23,6 @@ export const CastCard = ({ castData }: CastProps) => {
 };
 
 const Container = styled.div`
-	width: 200px;
-	margin: 10px;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: #fff;

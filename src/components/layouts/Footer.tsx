@@ -11,7 +11,7 @@ export const Footer = () => {
 };
 
 const HomeFooter = styled.footer`
-	padding: 20px 0;
-	background-color: #eee;
+	padding: 10px 0;
+	background-color: #e0e0e0;
 	text-align: center;
 `;

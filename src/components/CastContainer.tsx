@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { MEDIA_QUERY_END_POINT } from '../contants';
 import { Error, Loading, CastCard } from '.';
 import { useFuturamaData } from '../hooks/useFuturamaData';
 import { Cast } from '../types/Cast';
@@ -14,17 +15,29 @@ export const CastContainer = ({ name }: CastProps) => {
 	if (!data) return <Loading />;
 
 	return (
-		<CastBox>
+		<Container>
 			{data.map((useFuturamaData: Cast) => {
 				return <CastCard key={`cast-list-${useFuturamaData.id}`} castData={useFuturamaData} />;
 			})}
-		</CastBox>
+		</Container>
 	);
 };
 
-const CastBox = styled.section`
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 30px;
+const Container = styled.section`
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	padding: 30px 0;
+
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.DESKTOP}) {
+		grid-template-columns: repeat(5, 1fr);
+	}
 `;

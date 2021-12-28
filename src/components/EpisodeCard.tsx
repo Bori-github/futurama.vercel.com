@@ -18,6 +18,7 @@ export const EpisodeCard = ({ episodesData }: EpisodesProps) => {
 
 const Container = styled.div`
 	position: relative;
+	width: 100%;
 	margin-bottom: 20px;
 	padding: 10px 20px;
 	border-radius: 0 20px 20px 20px;
