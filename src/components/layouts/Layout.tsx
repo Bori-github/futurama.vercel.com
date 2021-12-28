@@ -12,4 +12,6 @@ export const Layout: React.FC = ({ children }) => {
 	);
 };
 
-const ContentsContainer = styled.main``;
+const ContentsContainer = styled.main`
+	min-height: 100vh;
+`;
