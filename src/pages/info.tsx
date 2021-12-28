@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import { Error, Loading } from '../components';
+import { MEDIA_QUERY_END_POINT } from '../contants';
 import { useFuturamaData } from '../hooks/useFuturamaData';
 import { Info } from '../types/Info';
 
@@ -78,6 +79,12 @@ const InfoContainer = styled.div`
 		width: 60%;
 		margin: 0 auto;
 		object-fit: contain;
+	}
+
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+		.InfoImg {
+			width: 400px;
+		}
 	}
 `;
 
