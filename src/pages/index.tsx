@@ -12,7 +12,15 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<HomeContainer></HomeContainer>
+			<HomeContainer>
+				<img src="/main_bg.jpg" alt="퓨처라마 메인 이미지" className="MainImg" />
+				<h2>ABOUT FUTURAMA</h2>
+				<AboutTxt>
+					Philip J. Fry awakens in the 31st century after a cryogenics mishap and goes to work for
+					Planet Express, making intergalactic deliveries with cycloptic captain Leela and robot
+					buddy Bender.
+				</AboutTxt>
+			</HomeContainer>
 		</div>
 	);
 };
@@ -21,11 +29,30 @@ export default Home;
 
 const HomeContainer = styled.section`
 	width: 100vw;
-	min-height: calc(100vh - 293px);
+	padding: 30px 0;
 	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	color: #fff;
+	text-align: center;
+
+	.MainImg {
+		width: 100%;
+	}
 
 	@media screen and (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-		min-height: calc(100vh - 260px);
+		min-height: calc(100vh - 240px);
+	}
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+		.MainImg {
+			width: 60%;
+		}
+	}
+`;
+
+const AboutTxt = styled.p`
+	padding: 0 50px;
+	@media screen and (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+		width: 1200px;
+		margin: 0 auto;
 	}
 `;
