@@ -8,3 +8,5 @@ export * from './EpisodeCard';
 export * from './EpisodesContainer';
 export * from './InventoryCard';
 export * from './InventoryContainer';
+export * from './QuestionsCard';
+export * from './QuestionsContainer';

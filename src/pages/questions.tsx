@@ -1,31 +1,13 @@
 import { NextPage } from 'next';
-import { Error, Loading } from '../components';
-import { useFuturamaData } from '../hooks/useFuturamaData';
-import { Questions } from '../types/Questions';
+import { QuestionsContainer } from '../components';
 
 const QuestionsPage: NextPage = () => {
-	const { data, error } = useFuturamaData('questions');
-
-	if (error) return <Error />;
-	if (!data) return <Loading />;
+	const name = 'questions';
 
 	return (
 		<div>
-			<h1>Questions</h1>
-			<main>
-				{data.map((questionsData: Questions) => {
-					const { id, question, possibleAnswers, correctAnswer } = questionsData;
-					return (
-						<div key={`questions-${id}`}>
-							<strong>{question}</strong>
-							<ul>
-								<li>{possibleAnswers}</li>
-							</ul>
-							<span>{correctAnswer}</span>
-						</div>
-					);
-				})}
-			</main>
+			<h3>Cast</h3>
+			<QuestionsContainer name={name} />
 		</div>
 	);
 };
